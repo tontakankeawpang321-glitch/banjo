@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banjo Pro - Real Banjo Sound</title>
+    <meta name="description" content="แอพมือถือแบนโจเสียงจริงจากไฟล์ดนตรีแท้ 21 คอร์ด โน้ตครบสเกล 10 เพลงสาธิต และห้องแต่งเพลง" />
+    <meta property="og:title" content="Banjo Pro - Real Banjo Sound" />
+    <meta property="og:description" content="แอพมือถือแบนโจเสียงจริงจากไฟล์ดนตรีแท้ 21 คอร์ด โน้ตครบสเกล 10 เพลงสาธิต และห้องแต่งเพลง" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Make window.fetch writable with getter and setter to prevent Chrome extensions
+      // from throwing "TypeError: Cannot set property fetch of #<Window> which has only a getter"
+      (function() {
+        try {
+          var _origFetch = window.fetch ? window.fetch.bind(window) : null;
+          var _customFetch = _origFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return _customFetch || _origFetch;
+            },
+            set: function(fn) {
+              _customFetch = fn;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          // ignore if environment prevents redefinition
+        }
+
+        // Suppress unhandled extension errors from interfering with the application
+        window.addEventListener('error', function(e) {
+          if (e.filename && e.filename.indexOf('chrome-extension://') !== -1) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            return true;
+          }
+        }, true);
+      })();
+    </script>
+    <script type="module" crossorigin src="/banjo/assets/index-BHke89_4.js"></script>
+    <link rel="stylesheet" crossorigin href="/banjo/assets/index-CLK0mxD0.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+
